@@ -1,0 +1,89 @@
+@import '/src/utils/css/Variables';
+
+.form,
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form {
+  padding: $padding-app;
+
+  background: $clr-white;
+}
+
+.resetBtn {  
+  padding: 0;
+
+  @include font($size: $font-size-default, $color: $clr-slate);
+  text-decoration: underline;
+  
+  border: none;
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+
+    color: $clr-red;
+  }
+}
+
+.typeBtnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  padding: 0;
+
+  @include font($size: $font-size-default, $weight: $font-weight-bold, $color: $clr-slate);
+  
+  border: none;
+
+  legend {
+    margin-bottom: .5rem;
+  }
+}
+
+.submitBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+  padding: .75rem;
+  
+  @include font($size: $font-size-mid, $weight: $font-weight-bold, $color: $clr-dark-slate);
+  
+  border: none;
+  border-radius: 100px;
+  
+  background: $clr-lime;
+
+  svg > path {
+    fill: $clr-dark-slate;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .form {
+    flex: 1;
+
+    padding: $padding-app-2x;
+
+    border-top-left-radius: $border-radius-pronounced;
+    border-bottom-left-radius: $border-radius-pronounced;
+  }
+
+  .titleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inputWrapper {
+    flex-direction: row;
+  }
+}

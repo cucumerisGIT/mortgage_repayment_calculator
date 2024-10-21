@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap&subset=latin");
+@import '/src/utils/css/Reset.css';
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* SHIFTING */
+/* MIXINS */
+.outerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: initial;
+  color: hsl(200, 24%, 40%);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 4px;
+}
+.inputWrapper:focus-within {
+  border: 1px solid hsl(61, 70%, 52%);
+  border-radius: 4px;
+  background: rgba(215, 218, 47, 0.1);
+}
+.inputWrapper--error {
+  border-color: hsl(4, 69%, 50%);
+}
+
+.input {
+  flex: 1;
+  width: 100%;
+  padding: 0 1rem;
+  border: none;
+  color: hsl(202, 55%, 16%);
+  background: transparent;
+}
+.input:focus {
+  outline: none;
+}
+
+.typeIndicator {
+  min-width: 48px;
+  padding: 0.5rem;
+  text-align: center;
+  color: hsl(200, 24%, 40%);
+  background: hsl(202, 86%, 94%);
+}
+.typeIndicator--error {
+  color: hsl(0, 0%, 100%);
+  background: hsl(4, 69%, 50%);
+}

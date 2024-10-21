@@ -1,0 +1,43 @@
+@import '/src/utils/css/Variables';
+
+.wrapper {
+  padding: 1rem;
+  
+  border-top: 4px solid $clr-lime;
+  border-radius: 8px;
+  
+  background: darken($clr-dark-slate, 4%);
+}
+
+.topDiv {
+  margin-bottom: 1rem;
+  
+  border-bottom: 1px solid $clr-blueish-gray;
+}
+
+.desc {
+  @include font($size: $font-size-default, $weight: $font-weight-normal, $color: $clr-ice-blue);
+}
+
+.monthly {
+  @include font($size: $font-size-massiv, $weight: $font-weight-bold, $color: $clr-lime);
+}
+
+.total {
+  @include font($size: $font-size-large, $weight: $font-weight-bold, $color: $clr-white);
+}
+
+.srOnly {
+  @include sr-only;
+}
+
+@media (min-width: $breakpoint-tablet) {  
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .div {
+    padding: 1rem 0;
+  }
+}

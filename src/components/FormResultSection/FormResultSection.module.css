@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap&subset=latin");
+@import '/src/utils/css/Reset.css';
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* SHIFTING */
+/* MIXINS */
+.section {
+  padding: 2rem 1rem;
+  background: hsl(202, 55%, 16%);
+}
+.section--centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: initial;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: inherit;
+  color: hsl(203, 41%, 72%);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+  .section {
+    flex: 1;
+    border-bottom-left-radius: 96px;
+    padding: 4rem 2rem;
+  }
+  .text {
+    margin-bottom: 2rem;
+  }
+}

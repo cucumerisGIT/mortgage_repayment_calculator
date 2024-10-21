@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap&subset=latin");
+@import '/src/utils/css/Reset.css';
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* SHIFTING */
+/* MIXINS */
+.form,
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form {
+  padding: 2rem 1rem;
+  background: hsl(0, 0%, 100%);
+}
+
+.resetBtn {
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: initial;
+  color: hsl(200, 24%, 40%);
+  text-decoration: underline;
+  border: none;
+  background: transparent;
+}
+.resetBtn:hover {
+  cursor: pointer;
+  color: hsl(4, 69%, 50%);
+}
+
+.typeBtnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: initial;
+  color: hsl(200, 24%, 40%);
+  border: none;
+}
+.typeBtnContainer legend {
+  margin-bottom: 0.5rem;
+}
+
+.submitBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: initial;
+  color: hsl(202, 55%, 16%);
+  border: none;
+  border-radius: 100px;
+  background: hsl(61, 70%, 52%);
+}
+.submitBtn svg > path {
+  fill: hsl(202, 55%, 16%);
+}
+
+@media (min-width: 800px) {
+  .form {
+    flex: 1;
+    padding: 4rem 2rem;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+  .titleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .inputWrapper {
+    flex-direction: row;
+  }
+}

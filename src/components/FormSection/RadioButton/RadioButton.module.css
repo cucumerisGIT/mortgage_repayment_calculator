@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap&subset=latin");
+@import '/src/utils/css/Reset.css';
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* SHIFTING */
+/* MIXINS */
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 4px;
+  color: hsl(202, 55%, 16%);
+}
+.button input {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+.button:has(input:checked) .checker {
+  border-color: hsl(61, 70%, 52%);
+}
+.button:has(input:checked) .checker::before {
+  background: hsl(61, 70%, 52%);
+}
+.button:focus-within, .button:hover {
+  cursor: pointer;
+  border: 1px solid hsl(61, 70%, 52%);
+  border-radius: 4px;
+  background: rgba(215, 218, 47, 0.1);
+}
+.button:has(input:checked) .checker {
+  border-color: hsl(61, 70%, 52%);
+}
+
+.checker {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 0 0.75rem;
+  border: 2px solid hsl(200, 24%, 40%);
+  border-radius: 50%;
+}
+.checker::before {
+  content: "";
+  height: 60%;
+  width: 60%;
+  border-radius: 50%;
+  background: transparent;
+}

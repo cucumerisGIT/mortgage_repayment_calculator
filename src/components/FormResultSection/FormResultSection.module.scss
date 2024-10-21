@@ -1,0 +1,41 @@
+@import '/src/utils/css/Variables';
+
+.section {  
+  padding: $padding-app;
+  
+  background: $clr-dark-slate;
+
+  &--centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.title {
+  @include font($size: $font-size-large, $weight: $font-weight-bold, $color: $clr-white);
+
+  margin-bottom: .5rem;
+}
+
+.text {
+  @include font($size: $font-size-default, $weight: $font-weight-normal, $color: $clr-ice-blue, $align: inherit);
+
+  margin-bottom: 1rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .section {
+    flex: 1;
+
+    border-bottom-left-radius: 96px;
+
+    padding: $padding-app-2x;
+  }
+
+  .text {
+    margin-bottom: 2rem;
+  }
+}

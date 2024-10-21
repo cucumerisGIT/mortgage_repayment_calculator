@@ -1,0 +1,66 @@
+@import '/src/utils/css/Variables';
+
+.button {  
+  display: inline-flex;
+  align-items: center;
+
+  padding: .5rem 0;
+
+  @include border(1px, solid, $clr-slate, 4px);
+
+  color: $clr-dark-slate;
+
+  input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  &:has(input:checked) {
+    .checker {
+      border-color: $clr-lime;
+    }
+    
+    .checker::before {
+      background: $clr-lime;
+    }
+  }
+
+  &:focus-within,
+  &:hover {
+    cursor: pointer;
+    
+    @include border(1px, solid, $clr-lime, 4px);
+
+    background: rgba($clr-lime, .1);
+  }
+
+  &:has(input:checked) .checker {
+    border-color: $clr-lime;
+  }
+}
+
+.checker {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 1.2rem;
+  width: 1.2rem;
+
+  margin: 0 .75rem;
+  
+  @include border(2px, solid, $clr-slate, 50%);
+
+  &::before {
+    content: '';
+
+    height: 60%;
+    width: 60%;
+
+    border-radius: 50%;
+
+    background: transparent;
+  }
+}

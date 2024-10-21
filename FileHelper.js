@@ -35,10 +35,11 @@ fs.watch(folderToWatch, function (eventType, foldername) {
  * @param folderPath - Path of the new folder
  */
 function createTemplateFiles(folderPath, foldername) {
-    var templateFiles = ["".concat(foldername, ".tsx"), "".concat(foldername, ".module.scss")];
+    var templateFiles = ["".concat(foldername, ".tsx"), "".concat(foldername, ".test.tsx"), "".concat(foldername, ".module.scss")];
     var templateContent = [
         "import React from 'react';\nimport styles from './".concat(foldername, ".module.css'\n\ninterface ").concat(foldername, "Props {\n\n}\n\nconst ").concat(foldername, ": React.FC<").concat(foldername, "Props> = ({\n\n}) => {\n\treturn (null);\n}\n\nexport default ").concat(foldername, ";"),
-        "@import '../../utils/css/Variables';"
+        "import React from 'react';\nimport { render, screen } from '@testing-library/react';\nimport ".concat(foldername, " from './").concat(foldername, "';\n\ntest('").concat(foldername, " Test', () => {\n\trender(<").concat(foldername, " />);\n\n});"),
+        "@import '/src/utils/css/Variables';"
     ];
     for (var i = 0; i < templateFiles.length; i++) {
         var filePath = path.join(folderPath, templateFiles[i]);

@@ -1,0 +1,63 @@
+@import '/src/utils/css/Variables';
+
+.outerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: .5rem;
+  
+  @include font($size: $font-size-default, $weight: $font-weight-bold, $color: $clr-slate);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  
+  overflow: hidden;
+
+  @include border(1px, solid, $clr-slate, 4px);
+
+  &:focus-within {
+    @include border(1px, solid, $clr-lime, 4px);
+
+    background: rgba($clr-lime, 0.1);
+  }
+
+  &--error {
+    border-color: $clr-red;
+  }
+}
+
+.input {
+  flex: 1;
+
+  width: 100%;
+  
+  padding: 0 1rem;
+
+  border: none;
+
+  color: $clr-dark-slate;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.typeIndicator {
+  min-width: 48px;
+  
+  padding: .5rem;
+
+  text-align: center;
+
+  color: $clr-slate;
+  background: $clr-light-blue;
+
+  &--error {
+    color: $clr-white;
+    background: $clr-red;
+  }
+}

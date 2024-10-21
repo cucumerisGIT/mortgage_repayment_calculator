@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap&subset=latin");
+@import '/src/utils/css/Reset.css';
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* SHIFTING */
+/* MIXINS */
+@media (min-width: 800px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100dvh;
+    width: 100dvw;
+    background: hsl(202, 86%, 94%);
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: clamp(400px, 100%, 1000px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 24px;
+    background: hsl(0, 0%, 100%);
+  }
+  .main {
+    width: clamp(300px, 100%, 500px);
+  }
+}

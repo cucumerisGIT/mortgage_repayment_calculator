@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap&subset=latin');
+
+@import '/src/utils/css/Reset.css';
+
+/* COLORS */
+
+$clr-lime:          hsl(61, 70%, 52%);
+$clr-red:           hsl(4, 69%, 50%);
+$clr-white:         hsl(0, 0%, 100%);
+$clr-light-blue:    hsl(202, 86%, 94%);
+$clr-ice-blue:      hsl(203, 41%, 72%);
+$clr-blueish-gray:  hsl(200, 26%, 54%);
+$clr-slate:         hsl(200, 24%, 40%);
+$clr-dark-slate:    hsl(202, 55%, 16%);
+
+/* BREAKPOINTS */
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 800px;
+$breakpoint-desktop: 1000px;
+
+/* FONT */
+
+// SIZE
+$font-size-default: 1rem;
+$font-size-small: .8rem;
+$font-size-mid: 1.2rem;
+$font-size-large: 1.75rem;
+$font-size-massiv: 2.5rem;
+
+// WEIGHT
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+/* SHIFTING */
+
+// PADDING
+$padding-app-x: 1rem;
+$padding-app-y: 2rem;
+$padding-app: $padding-app-y $padding-app-x;
+$padding-app-2x: calc($padding-app-y * 2) calc($padding-app-x * 2);
+
+// BORDER
+$border-radius-pronounced: 24px;
+
+/* MIXINS */
+
+@mixin font($family: 'Plus Jakarta Sans', $size: 1rem, $weight: 500, $color: black, $align: initial) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+
+  text-align: $align;
+
+  color: $color;
+}
+
+@mixin border($thickness: 1px, $type: solid, $color: black, $radius: 0) {
+  border: $thickness $type $color;
+  border-radius: $radius;
+}
+
+@mixin focused-element {
+  outline: none;
+  @include border(2px, solid, $clr-lime, 4px);
+}
+
+@mixin sr-only {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
